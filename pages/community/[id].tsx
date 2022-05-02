@@ -2,71 +2,84 @@ import type { NextPage } from "next";
 
 const ItemDetail: NextPage = () => {
   return (
-    <div className="px-4 py-10">
-      <div className="mb-8">
-        {/* 이미지 */}
-        <div className="h-96 bg-slate-300" />
-        <div className="flex mt-1 py-3 items-center border-t border-b space-x-3">
-          <div className="w-12 h-12 rounded-full bg-slate-300" />
-          {/* 프로필 */}
-          <div>
-            <p className="text-sm font-medium text-gray-700">Steve Jebs</p>
-            <p className="text-xs font-medium text-gray-400">
-              View profile &rarr;
-            </p>
-          </div>
-        </div>
-        {/* 상품정보 */}
-        <div className="mt-5">
-          <h1 className="text-3xl font-bold text-gray-900">Galaxy S50</h1>
-          <span className="text-3xl mt-3 block text-gray-900">$140</span>
-          <p className="my-6 text-gray-700">
-            My money&apos;s in that office, right? If she start giving me some
-            bullshit about it ain&apos;t there, and we got to go someplace else
-            and get it, I&apos;m gonna shoot you in the head then and there.
-            Then I&apos;m gonna shoot that bitch in the kneecaps, find out where
-            my goddamn money is. She gonna tell me too. Hey, look at me when
-            I&apos;m talking to you, motherfucker. You listen: we go in there,
-            and that ni**a Winston or anybody else is in there, you the first
-            motherfucker to get shot. You understand?
+    <div>
+      <span className="inline-flex my-3 ml-4 items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+        동네질문
+      </span>
+      <div className="flex mb-3 px-4 cursor-pointer pb-3  border-b items-center space-x-3">
+        <div className="w-10 h-10 rounded-full bg-slate-300" />
+        <div>
+          <p className="text-sm font-medium text-gray-700">Steve Jebs</p>
+          <p className="text-xs font-medium text-gray-500">
+            View profile &rarr;
           </p>
-          <div className="flex items-center justify-between space-x-2">
-            {/* 판매자랑 대화할 수 있는 버튼 */}
-            <button className="flex-1 bg-orange-500 text-white py-3 rounded-md focus:ring-2 focus:ring-offset-2 font-medium hover:bg-orange-600 focus:ring-orange-500">
-              Talk to seller
-            </button>
-            {/* 좋아요 상태 표시 */}
-            <button className="p-3 flex rounded-md items-center justify-center text-gray-400 hover:bg-gray-100 hover:textgray500 ">
-              <svg
-                className="h-6 w-6 "
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
       <div>
-        <h2 className="text-2xl font-bold text-gray-900">Similar items</h2>
-        <div className="grid grid-cols-2 gap-4">
-          {[1, 2, 3, 4, 5, 6].map((_, i) => (
-            <div key={i}>
-              <div className="h-56 w-full mb-4 bg-slate-300" />
-              <h3 className=" text-gray-700 -mb-1">Galaxy S60</h3>
-              <span className="text-xs font-medium text-gray-900">$6</span>
-            </div>
-          ))}
+        <div className="mt-2 px-4 text-gray-700">
+          <span className="text-orange-500 font-medium">Q.</span> What is the
+          best mandu restaurant?
         </div>
+        <div className="flex px-4 space-x-5 mt-3 text-gray-700 py-2.5 border-t border-b-[2px]  w-full">
+          <span className="flex space-x-2 items-center text-sm">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span>궁금해요 1</span>
+          </span>
+          <span className="flex space-x-2 items-center text-sm">
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              ></path>
+            </svg>
+            <span>답변 1</span>
+          </span>
+        </div>
+      </div>
+      <div className="px-4 my-5 space-y-5">
+        <div className="flex items-start space-x-3">
+          <div className="w-8 h-8 bg-slate-200 rounded-full" />
+          <div>
+            <span className="text-sm block font-medium text-gray-700">
+              Steve Jebs
+            </span>
+            <span className="text-xs text-gray-500 block ">2시간 전</span>
+            <p className="text-gray-700 mt-2">
+              The best mandu restaurant is the one next to my house.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="px-4">
+        <textarea
+          className="mt-1 shadow-sm w-full focus:ring-orange-500 rounded-md border-gray-300 focus:border-orange-500 "
+          rows={4}
+          placeholder="Answer this question!"
+        />
+        <button className="mt-2 w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 focus:outline-none ">
+          Reply
+        </button>
       </div>
     </div>
   );
