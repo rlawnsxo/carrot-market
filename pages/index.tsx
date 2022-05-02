@@ -3,25 +3,25 @@ import Layout from "../component/layout";
 
 const Home: NextPage = () => {
   return (
-    <Layout title="홈">
-      <div className="flex flex-col p-4 space-y-5">
+    <Layout title="홈" hasTabBar>
+      <div className="flex flex-col space-y-5">
         {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
           <div
             key={i}
-            className="flex border-b pb-4 cursor-pointer justify-between"
+            className="flex px-4 border-b pb-4 cursor-pointer justify-between"
           >
             <div className="flex space-x-4">
-              <div className="w-20 h-20 bg-gray-400 rouned-md rounded-lg" />
+              <div className="w-20 h-20 bg-gray-400 rounded-md" />
               <div className="pt-2 flex flex-col">
                 <h3 className="text-sm font-medium text-gray-900">
                   New iPhone 14
                 </h3>
                 <span className="text-xs text-gray-500">Black</span>
-                <span className="font-medium mt-1">$95</span>
+                <span className="font-medium mt-1 text-gray-900">$95</span>
               </div>
             </div>
-            <div className="flex space-x-2 items-end">
-              <div className="flex items-center space-x-0.5 text-sm text-gray-600">
+            <div className="flex items-end space-x-1.5 justify-end">
+              <div className="flex space-x-0.5 items-center text-sm text-gray-600">
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
                 </svg>
                 <span>1</span>
               </div>
-              <div className="flex items-center space-x-0.5 text-sm text-gray-600">
+              <div className="flex space-x-0.5 items-center text-sm text-gray-600">
                 <svg
                   className="w-4 h-4"
                   fill="none"
@@ -58,10 +58,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         ))}
-        <button
-          className="fixed bottom-24 right-5 hover:bg-orange-500 cursor-pointer
-       transition-colors bg-orange-400 p-4 rounded-full shadow-xl text-white"
-        >
+        <button className="fixed hover:bg-orange-500 bottom-24 transition-colors shadow-xl right-5 bg-orange-400 rounded-full p-4 text-white">
           <svg
             className="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
